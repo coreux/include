@@ -32,6 +32,5 @@ cat \
 	"$1/xcode.m4" \
 	"$1/cc.m4" \
 	"$1/posix.m4" \
-	"$1/docbook.m4" \
 	>acinclude.m4
 exit $?

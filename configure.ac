@@ -23,7 +23,11 @@ AC_PROG_CC_C99
 BT_PROG_CC_WARN
 AC_PROG_RANLIB
 BT_ENABLE_XSI
-BT_BUILD_DOCS
+
+# Override docdir
+if test x"$docdir" = x'${datarootdir}/doc/${PACKAGE_TARNAME}' ; then
+	docdir='${datarootdir}/doc/ux'
+fi
 
 AC_CONFIG_FILES([
 Makefile
@@ -34,7 +38,6 @@ ux/beos/Makefile
 ux/darwin/Makefile
 ux/linux/Makefile
 ux/minix/Makefile
-sys/Makefile
 t/Makefile
 ])
 
