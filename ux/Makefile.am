@@ -20,6 +20,6 @@ SUBDIRS = \
 subincludedir = $(includedir)/ux
 
 subinclude_HEADERS = \
-	cdefs.h inodef.h kerntypes.h machtypes.h nulldef.h sizedef.h timedef.h
+	cdefs.h inodef.h features.h kerntypes.h machtypes.h nulldef.h sizedef.h timedef.h
 
 EXTRA_DIST = README
