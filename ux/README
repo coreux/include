@@ -16,6 +16,17 @@ cdefs.h
 	compiler in use. When porting to a new compiler, cdefs.h must be
 	updated to support it.
 
+features.h
+	Defines feature flags used by other headers, including by the feature-
+	availability constants defined in <unistd.h>.
+
+inodef.h
+	Defines ino_t (included by multiple public headers).
+
+kerntypes.h
+	Determines the host kernel and includes the corresponding
+	ux/<kernel>/types.h file.
+
 machtypes.h
 	Determines the host architecture and includes the corresponding
 	ux/<arch>/types.h file.
@@ -33,7 +44,7 @@ machtypes.h
 	the types specified match those used by the kernel.
 
 sizedef.h
-	Defines size_t (included by multiple public headers)
+	Defines size_t (included by multiple public headers).
 
 timedef.h
-	Defines clock_t, time_t and timer_t (included by multiple public headers)
+	Defines clock_t, time_t and timer_t (included by multiple public headers).
