@@ -46,5 +46,8 @@ machtypes.h
 sizedef.h
 	Defines size_t (included by multiple public headers).
 
+ssizedef.h
+	Defines ssize_t (included by multiple public headers).
+
 timedef.h
 	Defines clock_t, time_t and timer_t (included by multiple public headers).
