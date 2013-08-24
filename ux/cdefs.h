@@ -17,6 +17,44 @@
 #ifndef __UX_CDEFS_H
 # define __UX_CDEFS_H                  1
 
+# if defined(__x86_64__) || defined(_M_AMD64)
+#  define __UX_x86_64__                1
+# elif defined(__i86__) || defined(__i186__) || defined(__i286__) || defined(_M_I86) || defined(_M_I186) || defined(_M_I286)
+#  define __UX_i86__                   1
+# elif defined(__i386__) || defined(_M_IX86)
+#  define __UX_x86__                   1
+# else
+#  error Unsupported host architecture
+# endif
+
+# if defined(__APPLE__)
+#  define __UX_darwin__                1
+# elif defined(__linux__)
+#  define __UX_linux__                 1
+# elif defined(__sun__) && defined(__svr4__)
+#  define __UX_solaris__               1
+# elif defined(_MINIX)
+#  define __UX_minix__                 1
+# elif defined(__BEOS__) || defined(__HAIKU__)
+#  define __UX_beos__                  1
+# elif defined(__FreeBSD__)
+#  define __UX_freebsd__               1
+# elif defined(__OpenBSD__)
+#  define __UX_openbsd__               1
+# elif defined(__NetBSD__)
+#  define __UX_netbsd__                1
+# elif defined(__QNXNTO__)
+#  define __UX_neutrino__              1
+# elif defined(__CYGWIN__)
+#  define __UX_cygwin__                1
+# elif defined(__INTERIX) || defined(__OPENNT)
+#  define __UX_interix__               1
+# elif (defined(__WIN32__) || defined(__WIN64__)|| defined(_WIN32) || defined(_WIN64)) && !defined(_VC_NODEFAULTLIB)
+#  define __UX_msvcrt__                1
+# else
+#  error Unsupported host kernel
+# endif
+
 # ifndef _POSIX_C_SOURCE
 #  if defined(_XOPEN_SOURCE) && _XOPEN_SOURCE == 600
 #   define _POSIX_C_SOURCE             200112L

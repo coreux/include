@@ -14,19 +14,12 @@
  *  limitations under the License.
  */
 
-#ifndef __UX_MACHTYPES_H
-# define __UX_MACHTYPES_H              1
+#ifndef __UX_INODEF_H
+# define __UX_INODEF_H                 1
 
-# include <ux/cdefs.h>
+# include <ux/kerntypes.h>
 
-# if defined(__UX_x86_64__)
-#  include <ux/x86-64/types.h>
-# elif defined(__UX_i86__)
-#  include <ux/i86/types.h>
-# elif defined(__UX_x86__)
-#  include <ux/x86/types.h>
-# else
-#  error Unsupported host architecture
-# endif
+/* ino_t: Used for file serial numbers */
+typedef __ux_ino_t ino_t;
 
-#endif /*!__UX_FIXEDTYPES_H*/
+#endif /*!__UX_INODEF_H*/
