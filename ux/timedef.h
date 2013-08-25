@@ -17,6 +17,8 @@
 #ifndef __UX_TIMEDEF_H
 # define __UX_TIMEDEF_H                1
 
+# include <ux/features.h>
+
 # if _XOPEN_SOURCE >= 600
 /* clock_t: Used for system times in clock ticks or CLOCKS_PER_SEC */
 typedef int clock_t;
@@ -25,7 +27,9 @@ typedef int clock_t;
 /* time_t: Used for time in seconds */
 typedef int time_t;
 
+# if __UX_OPT_TMR >= 0
 /* timer_t: Used for timer ID returned by timer_create() */
 typedef void *timer_t;
+# endif
 
 #endif /*!__UX_TIMEDEF_H*/
