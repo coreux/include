@@ -24,7 +24,7 @@
 # include <ux/machtypes.h>
 
 /* blkcnt_t: Used for file block counts */
-typedef __UX_INT64 __ux___ux_blkcnt_t;
+typedef __UX_INT64 __ux_blkcnt_t;
 
 /* blksize_t: Used for block sizes */
 typedef long __ux_blksize_t;
