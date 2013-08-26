@@ -98,4 +98,6 @@
 #  define __UX_NORETURN
 # endif
 
+# define __UX_UNUSED(arg)              ((void) arg)
+
 #endif /*!__UX_CDEFS_H*/
