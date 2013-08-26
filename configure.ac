@@ -32,6 +32,8 @@ fi
 AC_CONFIG_FILES([
 Makefile
 ux/Makefile
+ux/def/Makefile
+ux/const/Makefile
 ux/x86/Makefile
 ux/x86-64/Makefile
 ux/beos/Makefile

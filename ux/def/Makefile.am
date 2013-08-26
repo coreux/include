@@ -13,14 +13,9 @@
 ##  limitations under the License.
 ##
 
-SUBDIRS = \
-	def const \
-	x86 x86-64 \
-	beos darwin linux minix
-
-subincludedir = $(includedir)/ux
+subincludedir = $(includedir)/ux/def
 
 subinclude_HEADERS = \
-	cdefs.h features.h kerntypes.h machtypes.h
+	block.h clock.h dev.h ino.h intptr.h mode.h nlink.h off.h pid.h pthread.h \
+	sigset.h size.h ssize.h time.h timer.h ugid.h useconds.h
 
-EXTRA_DIST = README

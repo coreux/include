@@ -14,12 +14,12 @@
  *  limitations under the License.
  */
 
-#ifndef __UX_SIZEDEF_H
-# define __UX_SIZEDEF_H                1
+#ifndef __UX_DEF_INO_H
+# define __UX_DEF_INO_H                1
 
-# include <ux/machtypes.h>
+# include <ux/kerntypes.h>
 
-/* size_t: Unsigned integer type of the result of the sizeof operator */
-typedef __UX_SIZE size_t;
+/* ino_t: Used for file serial numbers */
+typedef __ux_ino_t ino_t;
 
-#endif /*!__UX_SIZEDEF_H*/
+#endif /*!__UX_DEF_INO_H*/

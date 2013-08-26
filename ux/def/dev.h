@@ -14,21 +14,12 @@
  *  limitations under the License.
  */
 
-#ifndef __UX_NULLDEF_H
-# define __UX_NULLDEF_H                1
+#ifndef __UX_DEF_DEV_H
+# define __UX_DEF_DEV_H                1
 
-# ifndef NULL
-#  if defined(__cplusplus)
-#   if defined(__GNUG__)
-/* For G++, use the builtin __null */
-#    define NULL                       __null
-#   else
-#    define NULL                       (0L)
-#   endif
-#  else /*__cplusplus*/
-#   define NULL                        ((void *) 0)
-#  endif
-# endif /*NULL*/
+# include <ux/kerntypes.h>
 
+/* dev_t: Used for device IDs */
+typedef __ux_dev_t dev_t;
 
-#endif /*!__UX_NULLDEF_H*/
+#endif /*!__UX_DEF_DEV_H*/

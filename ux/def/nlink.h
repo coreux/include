@@ -14,12 +14,12 @@
  *  limitations under the License.
  */
 
-#ifndef __UX_INODEF_H
-# define __UX_INODEF_H                 1
+#ifndef __UX_DEF_NLINK_H
+# define __UX_DEF_NLINK_H              1
 
 # include <ux/kerntypes.h>
 
-/* ino_t: Used for file serial numbers */
-typedef __ux_ino_t ino_t;
+/* nlink_t: Used for link counts */
+typedef __ux_nlink_t nlink_t;
 
-#endif /*!__UX_INODEF_H*/
+#endif /*!__UX_DEF_NLINK_H*/

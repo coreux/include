@@ -90,4 +90,12 @@
 # define __UX_SYM03(name)              __UX_SUF(name, __UX_SUFFIX_UX03)
 # define __UX_PRIVATE(name)            __UX_SUF(name, __UX_SUFFIX_PRIVATE)
 
+# define __UX_LEGACY
+
+# if defined(__GNUC__)
+#  define __UX_NORETURN                __attribute__((noreturn))
+# else
+#  define __UX_NORETURN
+# endif
+
 #endif /*!__UX_CDEFS_H*/
