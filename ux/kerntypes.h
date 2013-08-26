@@ -41,7 +41,7 @@
 #  include <ux/cygwin/types.h>
 # elif defined(__UX_interix__)
 #  include <ux/interix/types.h>
-# elif (defined(__UX_msvcrt__)
+# elif defined(__UX_msvcrt__)
 #  include <ux/msvcrt/types.h>
 # else
 #  error Unsupported host kernel
