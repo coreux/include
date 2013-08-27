@@ -33,7 +33,7 @@
 #  define __UX_linux__                 1
 # elif defined(__sun__) && defined(__svr4__)
 #  define __UX_solaris__               1
-# elif defined(_MINIX)
+# elif defined(__minix)
 #  define __UX_minix__                 1
 # elif defined(__BEOS__) || defined(__HAIKU__)
 #  define __UX_beos__                  1
