@@ -13,9 +13,16 @@
 ##  limitations under the License.
 ##
 
-EXTRA_DIST = README regen-acinclude.m4
+EXTRA_DIST = README regen-acinclude.m4 uxinclude-uninstalled.pc.in \
+	uxinclude.pc.in
 
 SUBDIRS = ux t .
+
+pcdir = @libdir@/pkgconfig
+
+noinst_DATA = uxinclude-uninstalled.pc
+
+pc_DATA = uxinclude.pc
 
 dist_doc_DATA = LICENSE-2.0
 

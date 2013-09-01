@@ -31,6 +31,8 @@ fi
 
 AC_CONFIG_FILES([
 Makefile
+uxinclude.pc
+uxinclude-uninstalled.pc
 ux/Makefile
 ux/def/Makefile
 ux/const/Makefile
